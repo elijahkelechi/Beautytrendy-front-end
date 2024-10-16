@@ -1,0 +1,42 @@
+/* Move all @import statements to the very top */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* Then add Tailwind's directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Place your custom styles after the Tailwind directives */
+@layer components {
+  .align-elements {
+    @apply mx-auto min-w-72;
+  }
+}
+
+/* Flashlight animation */
+@keyframes flashlight {
+  0% {
+    background-position: -150%;
+  }
+  50% {
+    background-position: 150%;
+  }
+  100% {
+    background-position: -150%;
+  }
+}
+
+.flashlight-animation {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: flashlight 2s infinite;
+}
