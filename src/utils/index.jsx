@@ -1,5 +1,5 @@
 import axios from "axios";
-const productionUrl = "https://sonnatrendy.onrender.com/api/v1";
+const productionUrl = "https://beautytrendy042.onrender.com";
 
 export const customFetch = axios.create({
   baseURL: productionUrl,

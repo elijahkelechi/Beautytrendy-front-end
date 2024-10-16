@@ -1,5 +1,5 @@
 // Register.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link, Form, useNavigation, redirect } from "react-router-dom";
 import { customFetch } from "../utils";
 import { toast } from "react-toastify";
@@ -19,11 +19,26 @@ export const action = async ({ request }) => {
 };
 
 const Register = () => {
+  const [password, setPassword] = useState("");
+  const [passwordMatch, setPasswordMatch] = useState("");
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+  const handlePasswordMatch = (e) => {
+    setPasswordMatch(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    if (password !== passwordMatch) {
+      e.preventDefault();
+      toast.error("Password does not match");
+    }
+  };
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   return (
     <div className="min-h-screen w-full flex justify-center items-center px-4 md:px-16 bg-gradient-to-br from-rose-200 via-rose-300 to-rose-400 overflow-hidden">
       <Form
+        onSubmit={handleSubmit}
         method="POST"
         className="bg-gradient-to-br from-rose-100 via-rose-200 to-rose-300 shadow-xl px-6 py-8 md:px-12 md:py-12 grid place-items-center gap-4 border-2 border-rose-100 rounded-md w-full max-w-md"
       >
@@ -79,6 +94,28 @@ const Register = () => {
               name="password"
               className="grow w-full"
               placeholder="Password"
+              onChange={handlePassword}
+            />
+          </label>
+
+          <label className="confirmPassword input input-bordered flex items-center gap-2 w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              className="h-4 w-4 opacity-70"
+            >
+              <path
+                fillRule="evenodd"
+                d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2.293l-3.955 3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <input
+              type="password"
+              className="grow w-full"
+              placeholder="Confirm Password"
+              onChange={handlePasswordMatch}
             />
           </label>
           <p className="text-gray-500">
