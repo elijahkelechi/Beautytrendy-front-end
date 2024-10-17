@@ -92,7 +92,7 @@ const NavBar = () => {
               >
                 <BsList
                   size={20}
-                  className="btn btn-primary btn-sm p-1 md:hover:text-white text-gray-50 md:mr-24 md:ml-8 md:bg-rose-100 size-10 md:rounded-full md:text-primary-content"
+                  className="btn btn-primary btn-sm p-1 md:hover:text-white text-gray-50 md:mr-24 md:ml-8 md:bg-gray-50 size-10 md:rounded-full md:text-primary-content"
                 />
               </label>
               <ul
@@ -116,7 +116,7 @@ const NavBar = () => {
             >
               <BsPerson
                 size={36}
-                className="btn rounded-full bg-rose-200 md:bg-rose-400 btn-sm p-1 btn-primary text-gray-50 size-10 md:size-14 cursor-pointer md:mx-2"
+                className="btn rounded-full bg-lime-200 md:bg-lime-400 btn-sm p-1 btn-primary text-gray-50 size-10 md:size-14 cursor-pointer md:mx-2"
               />
             </label>
             <ul
@@ -137,7 +137,7 @@ const NavBar = () => {
               className="btn text-gray-50 btn-primary relative flex items-center"
               to="/cart"
             >
-              <span className="badge badge-sm bg-info border-info text-primary-content absolute top-0 right-0 animate-bounce">
+              <span className="badge badge-sm bg-info border-info text-white absolute top-0 right-0 animate-bounce">
                 {numItemsInCart}
               </span>
               <BsCart3

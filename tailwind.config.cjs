@@ -9,21 +9,22 @@ export default {
     themes: [
       {
         mytheme: {
-          primary: "#fb7185", // bg-rose-400
+          primary: "#A3E635", // bg-lime-400
           secondary: "#e7e5e4", // bg-stone-100
           accent: "#fecaca", // bg-red-400 (for strong accents)
-          neutral: "#fecdd3", // bg-stone-200
+          neutral: "#d9f99d", // bg-lime-200
           "base-100": "#ffffff", // Base background color
-          info: "#99f6e4", // bg-lime-200 (for highlights)
+          info: "#1E3A8A", //
           success: "#4ade80", // Customize success color
           warning: "#facc15", // Customize warning color
           error: "#ef4444", // bg-red-400 (for CTAs)
 
           // Button styles
+
           "background-primary": "#fafaf9",
           "button-primary": "#fb7185", // Same as primary background with text color gray-700
           "button-secondary": "#e7e5e4", // Same as secondary background with text color gray-500
-          "primary-content": "#374151", // text-gray-700
+          "primary-content": "#6772E5", // text-gray-700
           "secondary-content": "#6b7280", // text-gray-500
         },
       },

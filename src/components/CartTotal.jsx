@@ -1,15 +1,16 @@
 import { useSelector } from "react-redux";
 import formatPrice from "../utils";
-import { clearCart } from "../features/cart/cartSlice";
-import { useDispatch } from "react-redux";
+// import { clearCart } from "../features/cart/cartSlice";
+// import { useDispatch } from "react-redux";
+
 const CartTotal = () => {
   const { cartTotal, shipping, tax, orderTotal } = useSelector(
     (state) => state.cartState
   );
-  const dispatch = useDispatch();
-  const clearCartFunc = () => {
-    dispatch(clearCart());
-  };
+  // const dispatch = useDispatch();
+  // const clearCartFunc = () => {
+  //   dispatch(clearCart());
+  // };
   return (
     <div>
       <div className="md:fixed md:t op-32 md:right-4 z-50">

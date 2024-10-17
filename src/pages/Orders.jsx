@@ -54,13 +54,12 @@ const Orders = () => {
               formAddress,
               formState,
               formCountry,
-
               createdAt,
             } = order;
             return (
               <div key={order._id} className="border p-4 rounded shadow-md">
                 <h2 className="text-lg font-bold">
-                  Order Total: {formatPrice(total)} NGN
+                  Order Total: {formatPrice(total)} USD
                 </h2>
 
                 <p className="text-sm">

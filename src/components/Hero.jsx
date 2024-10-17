@@ -78,7 +78,7 @@ const Hero = () => {
       <div
         className=" md:pb-8 md:pt-4 lg:h-[25rem] md:h-[22rem]"
         style={{
-          background: `linear-gradient(135deg, rgba(253, 186, 223, 0.8), rgba(187, 222, 251, 0.8), rgba(236, 239, 255, 0.8))`, // Change these to your selected colors
+          background: `linear-gradient(135deg, rgba(187, 222, 251, 0.8), rgba(173, 216, 230, 0.8), rgba(115, 211, 203, 0.8), rgba(130, 219, 160, 0.8), rgba(151, 229, 136, 0.8), rgba(173, 239, 103, 0.8))`,
           backgroundSize: "400% 400%",
           position: "relative",
           overflow: "hidden",
@@ -99,7 +99,7 @@ const Hero = () => {
           }}
         ></span>
         <div className="grid md:grid-cols-2 lg:grid-cols-12 py-2">
-          <div className="lg:col-span-6 mt-4 mb-2 lg:mt-[1rem] lg:h-[4rem] px-2 md:px-4 md:py-4 md:ml-2 grid grid-cols-3 gap-2 bg-gradient-to-l from-rose-300 to-rose-400 w-full p-1 shadow-lg flex-grow rounded-sm ">
+          <div className="lg:col-span-6 mt-4  lg:mt-[1rem] lg:h-[4rem] mb-[8rem] h-[2rem] px-2 md:px-4 md:py-4 md:ml-2 grid grid-cols-3 gap-2 bg-gradient-to-l from-lime-300 to-lime-400 w-full p-1 shadow-lg flex-grow rounded-sm ">
             {/* First carousel */}
             <div className="w-full h-auto px-1 pb-6 bg-purple-200 rounded-sm place-content-center">
               <Slider ref={slider1Ref} {...settings}>
@@ -182,15 +182,15 @@ const Hero = () => {
 
             <span
               style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/drg9uyqf9/image/upload/v1727965391/carousel-images/tmp-1-1727965453168_h7x9nb.jpg')", // Replace with your texture image URL
+                background: `linear-gradient(135deg, rgba(190, 242, 100, 0.8), rgba(173, 239, 103, 0.8), rgba(151, 229, 136, 0.8), rgba(115, 211, 203, 0.8), rgba(144, 202, 249, 0.8), rgba(187, 222, 251, 0.8))`, // Lime-200 to blue gradient
+                backgroundSize: "cover", // Adjust size of the background image
                 position: "absolute",
                 top: 0,
                 left: 0,
                 right: 0,
                 bottom: 0,
-                opacity: 0.2, // Adjust opacity for texture visibility
                 zIndex: -1,
+                filter: "blur(5px)", // Apply blur effect to the gradient
               }}
             ></span>
           </h1>

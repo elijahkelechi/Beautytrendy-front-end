@@ -1,5 +1,5 @@
 import axios from "axios";
-const productionUrl = "https://beautytrendy042.onrender.com";
+const productionUrl = "https://beautytrendy042.onrender.com/api/v1";
 
 export const customFetch = axios.create({
   baseURL: productionUrl,
@@ -8,7 +8,7 @@ export const customFetch = axios.create({
 const formatPrice = (price) => {
   const nairaAmount = new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "NGN",
+    currency: "USD",
   }).format(price / 100);
   return nairaAmount;
 };

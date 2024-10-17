@@ -5,7 +5,7 @@ import formartPrice from "../utils/index";
 const FeaturedProducts = () => {
   const { products } = useLoaderData();
   const [scrollPosition, setScrollPosition] = useState(0);
-  const productWidth = 200; // Width of each product card
+  const productWidth = 150; // Width of each product card
   const totalWidth = products.length * productWidth; // Total width of all products
 
   // Auto-scroll effect using useEffect

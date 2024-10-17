@@ -3,6 +3,7 @@ import { customFetch } from "../utils";
 import { loginUser } from "../features/user/userSlice";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
+import logo from "../assets/logo.png";
 
 export const action =
   (store) =>
@@ -28,11 +29,14 @@ const Login = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   return (
-    <div className="min-h-screen w-full flex justify-center items-center px-4 md:px-16 bg-gradient-to-br from-rose-200 via-rose-300 to-rose-400 overflow-hidden">
+    <div className="min-h-screen w-full flex justify-center items-center px-4 md:px-16 bg-gradient-to-br from-lime-200 via-lime-300 to-lime-400 overflow-hidden">
       <Form
         method="POST"
-        className="bg-gradient-to-br from-rose-100 via-rose-200 to-rose-300 shadow-xl px-6 py-8 md:px-12 md:py-12 grid place-items-center gap-4 border-2 border-rose-100 rounded-md w-full max-w-md"
+        className="bg-gradient-to-br from-lime-100 via-lime-200 to-lime-300 shadow-xl px-6 py-8 md:px-12 md:py-12 grid place-items-center gap-4 border-2  rounded-md w-full max-w-md"
       >
+        <div>
+          <img src={logo} />
+        </div>
         <div className="grid gap-2 md:gap-4 w-full">
           <label className="input input-bordered flex items-center gap-2 w-full">
             <svg
@@ -76,7 +80,7 @@ const Login = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn bg-rose-400 mt-4 w-full text-center text-white"
+          className="btn bg-info mt-4 w-full text-center text-gray-50"
         >
           {isSubmitting ? (
             <>
@@ -84,12 +88,12 @@ const Login = () => {
               Submitting...
             </>
           ) : (
-            <span className="text-white">Login</span>
+            <span className="text-gray-50">Login</span>
           )}
         </button>
-        <p className="text-gray-500">
+        <p className="text-gray-400">
           Have no account?{" "}
-          <Link to="/register" className="link link-hover text-rose-400">
+          <Link to="/register" className="link link-hover text-info">
             Register
           </Link>
         </p>

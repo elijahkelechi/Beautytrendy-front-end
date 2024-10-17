@@ -20,7 +20,7 @@ const PaginationContainer = () => {
     <div className="mt-2 mb-4 flex justify-center px-1">
       <div className="join">
         <button
-          className="btn btn-sm md:btn-lg btn-primary text-white capitalize join-item"
+          className="btn btn-sm md:btn-lg btn-info text-white capitalize join-item"
           onClick={() => {
             const prevPage = currentPage > 1 ? currentPage - 1 : totalPages;
             handlePageChange(prevPage);
@@ -33,14 +33,14 @@ const PaginationContainer = () => {
             key={pageNumbers}
             onClick={() => handlePageChange(pageNumbers)} // Pass pageNumbers correctly
             className={`btn btn-sm md:btn-lg join-item ${
-              pageNumbers === currentPage ? "bg-rose-500 text-white" : ""
+              pageNumbers === currentPage ? "bg-blue-500 text-white" : ""
             }`}
           >
             {pageNumbers}
           </button>
         ))}
         <button
-          className="btn btn-sm md:btn-lg btn-primary text-white capitalize join-item"
+          className="btn btn-sm md:btn-lg btn-info text-white capitalize join-item"
           onClick={() => {
             const nextPage = currentPage < totalPages ? currentPage + 1 : 1;
             handlePageChange(nextPage);

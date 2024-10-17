@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link, Form, useNavigation, redirect } from "react-router-dom";
 import { customFetch } from "../utils";
 import { toast } from "react-toastify";
+import logo from "../assets/logo.png";
 
 export const action = async ({ request }) => {
   const formData = await request.formData();
@@ -36,12 +37,15 @@ const Register = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   return (
-    <div className="min-h-screen w-full flex justify-center items-center px-4 md:px-16 bg-gradient-to-br from-rose-200 via-rose-300 to-rose-400 overflow-hidden">
+    <div className="min-h-screen w-full flex justify-center items-center px-4 md:px-16 bg-gradient-to-br from-lime-200 via-lime-300 to-lime-400 overflow-hidden">
       <Form
         onSubmit={handleSubmit}
         method="POST"
-        className="bg-gradient-to-br from-rose-100 via-rose-200 to-rose-300 shadow-xl px-6 py-8 md:px-12 md:py-12 grid place-items-center gap-4 border-2 border-rose-100 rounded-md w-full max-w-md"
+        className="bg-gradient-to-br from-lime-100 via-lime-200 to-lime-300 shadow-xl px-6 py-4 md:px-12 md:py-6 grid place-items-center gap-4 border-2 rounded-md w-full max-w-md"
       >
+        <div>
+          <img src={logo} />
+        </div>
         <div className="grid gap-2 md:gap-4 w-full">
           <label className="input input-bordered flex items-center gap-2 w-full">
             <svg
@@ -120,7 +124,7 @@ const Register = () => {
           </label>
           <p className="text-gray-500">
             Already registered?{" "}
-            <Link className="link link-hover text-rose-400" to="/login">
+            <Link className="link link-hover text-info" to="/login">
               Login
             </Link>
           </p>
@@ -129,7 +133,7 @@ const Register = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn bg-rose-400 mt-4 w-full text-center text-white"
+          className="btn bg-info mt-4 w-full text-center text-white"
         >
           {isSubmitting ? (
             <>

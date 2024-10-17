@@ -20,7 +20,7 @@ const HomeLayout = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPreloader(false);
-    }, 10000); // Show preloader for 2 seconds
+    }, 200); // Show preloader for 2 seconds
 
     return () => clearTimeout(timer);
   }, []);

@@ -23,7 +23,7 @@ const LandingPagination = () => {
     <div className="mt-2 mb-0 flex justify-center px-1">
       <div className="join">
         <button
-          className="btn btn-sm md:btn-lg btn-primary text-white capitalize join-item"
+          className="btn btn-sm md:btn-lg btn-info text-gray-200 capitalize join-item"
           onClick={() => {
             handlePageChange(1);
           }}
@@ -35,14 +35,14 @@ const LandingPagination = () => {
             key={pageNumbers}
             onClick={() => handlePageChange(pageNumbers)} // Pass pageNumbers correctly
             className={`btn btn-sm md:btn-lg join-item ${
-              pageNumbers === currentPage ? "bg-rose-500 text-white" : ""
+              pageNumbers === currentPage ? "bg-blue-500 text-white" : ""
             }`}
           >
             {pageNumbers}
           </button>
         ))}
         <button
-          className="btn btn-sm md:btn-lg btn-primary text-white capitalize join-item"
+          className="btn btn-sm md:btn-lg btn-info text-gray-200 capitalize join-item"
           onClick={() => {
             handlePageChange(2);
           }}

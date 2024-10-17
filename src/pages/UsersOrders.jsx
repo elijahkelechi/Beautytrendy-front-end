@@ -67,7 +67,7 @@ const UsersOrders = () => {
                   className="border p-4 rounded-lg shadow-lg bg-white"
                 >
                   <h2 className="text-xl font-bold mb-2">
-                    Order Total: {formatPrice(total)} NGN
+                    Order Total: {formatPrice(total)} USD
                   </h2>
                   <p className="font-semibold">Customer Name: {formName}</p>
                   <p className="text-sm text-gray-700">

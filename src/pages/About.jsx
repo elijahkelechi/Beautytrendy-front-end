@@ -33,7 +33,7 @@ const About = () => {
                 providing quality products.
               </p>
             </div>
-            <h1 className="hidden md:block bg-info w-full text-primary-content text-center text-xl font-bold leading-tight mt-4">
+            <h1 className="hidden md:block bg-info w-full text-gray-50 text-center text-xl font-bold leading-tight mt-4">
               We are the best
             </h1>
 
@@ -49,7 +49,7 @@ const About = () => {
                 </p>
               </div>
               <div>
-                <h1 className="hidden md:block text-center text-xl font-bold leading-tight mt-4">
+                <h1 className="hidden md:block text-center text-gray-200 text-xl font-bold leading-tight mt-4">
                   Meet Sonna
                 </h1>
                 <video
@@ -65,7 +65,7 @@ const About = () => {
 
       <section className="phone-display-only written-content px-2 md:hidden mt-2">
         <div>
-          <h1 className="bg-info text-primary-content text-center text-xl font-bold leading-tight">
+          <h1 className="bg-info text-gray-50  text-center text-xl font-bold leading-tight">
             Meet Sonna!
           </h1>
 

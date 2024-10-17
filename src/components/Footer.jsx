@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="absolute w-full mt-4 bg-rose-600 text-gray-200 py-4 md:py-10">
+    <footer className="absolute w-full mt-4 bg-info text-gray-200 py-4 md:py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start">
           {/* Customer Service Section */}
@@ -95,13 +95,13 @@ const Footer = () => {
             <h2 className="text-sm md:text-lg font-bold mb-2">Get in Touch</h2>
             <p className="mb-1">
               <FaEnvelope className="inline mr-2 text-sm md:text-lg" />{" "}
-              support@sonnatrendy.com
+              support@beautytrendy.com
             </p>
             <p className="mb-1">
-              <FaPhone className="inline mr-2 text-sm md:text-lg" /> +234 916
-              3381 375
+              <FaPhone className="inline mr-2 text-sm md:text-lg" /> +1 916 3381
+              375
             </p>
-            <p> Trendy Street, Uyo City, Nigeria</p>
+            <p>Beauty City</p>
           </div>
 
           {/* Useful Links */}
@@ -136,7 +136,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="mt-4 text-center border-t border-rose-500 pt-4">
+        <div className="mt-4 text-center border-t border-lime-500 pt-4">
           <p>
             &copy; {new Date().getFullYear()} Sonnatrendy Store. All rights
             reserved.

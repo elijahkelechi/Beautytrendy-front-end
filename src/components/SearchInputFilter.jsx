@@ -22,7 +22,7 @@ const SearchInputFilter = () => {
         value={searchQuery}
         onKeyDown={handleKeyDown}
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="input input-bordered pl-14 pr-4 py-0 md:w-96 rounded-full focus:outline-none focus:ring focus:ring-rose-400 transition-all duration-200"
+        className="input input-bordered bg-gray-50 pl-14 pr-4 py-0 md:w-96 rounded-full focus:outline-none focus:ring focus:ring-lime-400 transition-all duration-200"
         placeholder="Search products"
       />
 
