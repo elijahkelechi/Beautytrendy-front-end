@@ -35,21 +35,6 @@ const CheckoutForm = () => {
     shipping: shippingFee,
   } = useSelector((state) => state.cartState);
 
-  const createOrder = async (order) => {
-    try {
-      const response = await customFetch.post("/orders", order, {
-        withCredentials: true,
-      });
-
-      toast.success("Order successful! Your product is on the way! 😇 ");
-      dispatch(clearCart());
-      return response;
-    } catch (error) {
-      toast.error("Failed to create order: " + error?.response?.msg);
-      console.error("Error creating order:", error);
-    }
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -58,18 +43,18 @@ const CheckoutForm = () => {
     }
 
     try {
-      // Fetch the payment intent client secret from the backend
+      // Create the order and get payment intent client secret in a single request
       const response = await customFetch.post(
         "/orders",
         {
           tax,
           shippingFee,
-          formName: name, // Use name for order creation
-          formEmail: email, // Use email for order creation
-          formAddress: address, // Use address for order creation
-          formCity: city, // Use city for order creation
-          formState: state, // Use state for order creation
-          formCountry: country, // Use country for order creation
+          formName: name,
+          formEmail: email,
+          formAddress: address,
+          formCity: city,
+          formState: state,
+          formCountry: country,
           items,
         },
         { withCredentials: true }
@@ -82,13 +67,13 @@ const CheckoutForm = () => {
         payment_method: {
           card: elements.getElement(CardElement),
           billing_details: {
-            name: billingName, // Use billing name for payment
-            email: billingEmail, // Use billing email for payment
+            name: billingName,
+            email: billingEmail,
             address: {
-              line1: billingAddress, // Use billing address for payment
-              city: billingCity, // Use billing city for payment
-              state: billingState, // Use billing state for payment
-              country: billingCountry, // Use billing country for payment
+              line1: billingAddress,
+              city: billingCity,
+              state: billingState,
+              country: billingCountry,
             },
           },
         },
@@ -99,20 +84,8 @@ const CheckoutForm = () => {
       } else {
         if (result.paymentIntent.status === "succeeded") {
           toast.success("Payment successful!");
-
-          // Create the order with the delivery address
-          const order = {
-            tax,
-            shippingFee,
-            formName: name, // Use name for order creation
-            formEmail: email, // Use email for order creation
-            formAddress: address, // Use address for order creation
-            formCity: city, // Use city for order creation
-            formState: state, // Use state for order creation
-            formCountry: country, // Use country for order creation
-            items,
-          };
-          await createOrder(order);
+          // Clear the cart after successful payment
+          dispatch(clearCart());
         }
       }
     } catch (error) {
@@ -198,7 +171,7 @@ const CheckoutForm = () => {
         </label>
 
         {/* Billing Information */}
-        <div className="border-2 border-primary-content shadow-sm shadow-primary-content px-4 py-6">
+        <div className="border-2 border-primary-content shadow-sm shadow-primary-content px-24 py-6">
           <div className="flex place-items-center">
             <img src={stripeLogo} className="h-36 w-full" />
           </div>
