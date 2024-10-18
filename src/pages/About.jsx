@@ -22,7 +22,7 @@ const About = () => {
           <div className="md:mb-4 lg:mb-48 text-center text-stone-50 bg-black bg-opacity-50 p-2 md:w-full md:py-14 lg:w-full lg: lg:pt-4 md:pt-2 md:rounded-lg">
             <div className=" lg:mb-4 lg:mt-1">
               <h1 className="text-2xl font-bold leading-tight mt-4">
-                SonnaTrendy <span className="block">Online Store</span>
+                Beautytrendy <span className="block">Online Store</span>
               </h1>
               <p className="text-center mt-4 text-lg leading-normal hidden md:block">
                 Learn more about our brand and mission. We are passionate about
@@ -50,7 +50,7 @@ const About = () => {
               </div>
               <div>
                 <h1 className="hidden md:block text-center text-gray-200 text-xl font-bold leading-tight mt-4">
-                  Meet Sonna
+                  Meet Beauty
                 </h1>
                 <video
                   src="https://res.cloudinary.com/drg9uyqf9/video/upload/v1728104949/product%20videos/tmp-2-1728104939428_v9tbc1.mov"
@@ -66,7 +66,7 @@ const About = () => {
       <section className="phone-display-only written-content px-2 md:hidden mt-2">
         <div>
           <h1 className="bg-info text-gray-50  text-center text-xl font-bold leading-tight">
-            Meet Sonna!
+            Meet Beauty!
           </h1>
 
           <p className="mt-2 text-center text-primary-content text-lg leading-normal md:hidden">
@@ -86,7 +86,7 @@ const About = () => {
           </h1>
         </div>
         <h1 className="text-center mt-2 text-primary-content text-sm font-bold leading-tight">
-          At Sonna Trendy, we provide luxurious body creams to elevate your
+          At BeautyTrendy, we provide luxurious body creams to elevate your
           self-care routine.
         </h1>
         <div className="mt-3">
