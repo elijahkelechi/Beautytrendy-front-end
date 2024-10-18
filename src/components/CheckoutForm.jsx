@@ -171,13 +171,13 @@ const CheckoutForm = () => {
         </label>
 
         {/* Billing Information */}
-        <div className="border-2 border-primary-content shadow-sm shadow-primary-content px-24 py-6">
+        <div className="border-2 border-primary-content shadow-sm shadow-primary-content px-8 md:24 py-6">
           <div className="flex place-items-center">
             <img src={stripeLogo} className="h-36 w-full" />
           </div>
           <h2 className="mt-6">
             Billing Information (
-            <span className="text-rose-700 text-xl md:text-2xl animate-ping">
+            <span className="text-rose-700 text-sm md:text-2xl animate-ping">
               Testing Mode
             </span>
             )
